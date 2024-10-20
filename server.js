@@ -14,25 +14,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/restaurantDB', { useNewUrlParser: tr
     .catch(err => console.error('MongoDB connection error:', err));
 
 // Dummy restaurant data (you can replace this with actual data from MongoDB)
-const restaurantData = [
-    {
-        restaurant_id: 1,
-        name: "Pizza Place",
-        cuisines: ["Italian"],
-        location: "123 Main St",
-        rating: 4.5,
-        dietary_options: ["vegetarian", "gluten-free"]
-    },
-    {
-        restaurant_id: 2,
-        name: "Sushi Bar",
-        cuisines: ["Japanese"],
-        location: "456 Elm St",
-        rating: 4.7,
-        dietary_options: ["vegetarian", "vegan"]
-    },
-    // Add more restaurant objects as needed
-];
+
 
 // Endpoint to get recommendations from Python service
 app.post('/api/recommendations', async (req, res) => {
